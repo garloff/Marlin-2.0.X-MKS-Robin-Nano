@@ -62,8 +62,8 @@
 //#define SAPPHIRE_PRO
 //#define SAPPHIRE_PLUS
 
-// Cartesian
-//#define BLUER
+//Cartesian
+#define Lotmaxx
 
 //===========================================================================
 //============================= Advanced presets ============================
@@ -153,11 +153,11 @@
 
 // Custom Bed Size
 // If you have a different size of a print bed, enter it here
-//#define CUSTOM_BED_SIZE
+#define CUSTOM_BED_SIZE
 #if ENABLED(CUSTOM_BED_SIZE)
-  #define X_BED_SIZE_CUSTOM 200
-  #define Y_BED_SIZE_CUSTOM 200
-  #define Z_BED_SIZE_CUSTOM 200
+  #define X_BED_SIZE_CUSTOM 235
+  #define Y_BED_SIZE_CUSTOM 235
+  #define Z_BED_SIZE_CUSTOM 285
 #endif
 
 // Custom PID & TEMP SENSOR Settings  
@@ -323,7 +323,7 @@
 //#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-#if ANY(SAPPHIRE_PRO, SAPPHIRE_PLUS, BLUER)
+#if ANY(SAPPHIRE_PRO, SAPPHIRE_PLUS, Lotmaxx)
   #define CUSTOM_STATUS_SCREEN_IMAGE
 #else
   //#define CUSTOM_STATUS_SCREEN_IMAGE
@@ -356,8 +356,8 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-  #if ANY (SAPPHIRE_PRO, SAPPHIRE_PLUS, BLUER)
-    //SAPPHIRE_PRO, SAPPHIRE_PLUS, BLUER
+  #if ANY (SAPPHIRE_PRO, SAPPHIRE_PLUS, Lotmaxx)
+    //SAPPHIRE_PRO, SAPPHIRE_PLUS, Lotmaxx
     #define BAUDRATE 115200 
   #else
     //No Preset
@@ -379,9 +379,9 @@
   #elif ENABLED(SAPPHIRE_PLUS)
     //Sapphire Plus
     #define CUSTOM_MACHINE_NAME "Sapphire Plus"
-  #elif ENABLED(BLUER)
-    //Bluer
-    #define CUSTOM_MACHINE_NAME "Bluer"
+  #elif ENABLED(Lotmaxx)
+    //Lotmaxx
+    #define CUSTOM_MACHINE_NAME "Lotmaxx"
   #else
     //#define CUSTOM_MACHINE_NAME "3D Printer"
   #endif
@@ -753,18 +753,18 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  #if ENABLED(SAPPHIRE_PRO) && NONE(CUSTOM_HOTEND_PID) 
+  #if ENABLED(SAPPHIRE_PRO) && NONE(CUSTOM_HOTEND_PID)
     //Sapphire Pro
     #define DEFAULT_Kp 14.21
     #define DEFAULT_Ki 0.88
     #define DEFAULT_Kd 57.26
-  #elif ENABLED(SAPPHIRE_PLUS) && NONE(CUSTOM_HOTEND_PID) 
+  #elif ENABLED(SAPPHIRE_PLUS) && NONE(CUSTOM_HOTEND_PID)
     //Sapphire Plus
     #define DEFAULT_Kp 15.30
     #define DEFAULT_Ki 0.85
     #define DEFAULT_Kd 56.55
-  #elif ENABLED(BLUER) && NONE(CUSTOM_HOTEND_PID) 
-    //Bluer
+  #elif ENABLED(Lotmaxx) && NONE(CUSTOM_HOTEND_PID)
+    //Lotmaxx
     #define DEFAULT_Kp 8.4
     #define DEFAULT_Ki 0.4
     #define DEFAULT_Kd 44.0
@@ -827,8 +827,8 @@
     #define DEFAULT_bedKp 45.0
     #define DEFAULT_bedKi 7.9
     #define DEFAULT_bedKd 150
-  #elif ENABLED(BLUER) && NONE(CUSTOM_BED_PID) 
-    //Bluer
+  #elif ENABLED(Lotmaxx) && NONE(CUSTOM_BED_PID) 
+    //Lotmaxx
     #define DEFAULT_bedKp 10.34
     #define DEFAULT_bedKi 0.25
     #define DEFAULT_bedKd 300.5
@@ -910,7 +910,7 @@
     //#define COREZX
     //#define COREZY
   #else
-    //No Preset & Bluer
+    //No Preset & Lotmaxx
     //#define COREXY
     //#define COREXZ
     //#define COREYZ
@@ -938,7 +938,7 @@
     #define USE_YMAX_PLUG
     //#define USE_ZMAX_PLUG
   #else
-    //No Preset & Bluer
+    //No Preset & Lotmaxx
     #define USE_XMIN_PLUG
     #define USE_YMIN_PLUG
     #define USE_ZMIN_PLUG
@@ -974,9 +974,9 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#if ANY(SAPPHIRE_PRO, SAPPHIRE_PLUS, BLUER)
+#if ANY(SAPPHIRE_PRO, SAPPHIRE_PLUS, Lotmaxx)
   #if ENABLED(OPTICAL_ENDSTOPS_XY)
-    //Sapphire Pro,Plus & Bluer & Optical Endstops
+    //Sapphire Pro,Plus & Lotmaxx & Optical Endstops
     #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
     #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
     #define X_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
@@ -984,7 +984,7 @@
     #define Z_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
     #define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
   #else 
-    //Sapphire Pro,Plus & Bluer & Mechanical Endstops
+    //Sapphire Pro,Plus & Lotmaxx & Mechanical Endstops
     #define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
     #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
     #define X_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
@@ -1003,7 +1003,7 @@
 #endif
 
 #if ENABLED(OPTICAL_ENDSTOP_Z)
-  //Sapphire Pro,Plus & Bluer & Optical Endstops on Z
+  //Sapphire Pro,Plus & Lotmaxx & Optical Endstops on Z
   #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #else
   //No Preset
@@ -1043,8 +1043,8 @@
     #define E0_DRIVER_TYPE TMC2208_STANDALONE
     //#define E1_DRIVER_TYPE A4988
 
-  #elif ENABLED(BLUER) && NONE(CUSTOM_STEPPER_DRIVERS)
-    //Bluer
+  #elif ENABLED(Lotmaxx) && NONE(CUSTOM_STEPPER_DRIVERS)
+    //Lotmaxx
     #define X_DRIVER_TYPE  TMC2208_STANDALONE
     #define Y_DRIVER_TYPE  TMC2208_STANDALONE
     #define Z_DRIVER_TYPE  A4988
@@ -1156,8 +1156,8 @@
     #ifndef STEPS_E0
       #define STEPS_E0    415
     #endif
-  #elif ENABLED(BLUER)
-    //Bluer
+  #elif ENABLED(Lotmaxx)
+    //Lotmaxx
     #ifndef STEPS_X
       #define STEPS_X     80
     #endif
@@ -1168,7 +1168,7 @@
       #define STEPS_Z     400
     #endif
     #ifndef STEPS_E0
-      #define STEPS_E0    90
+      #define STEPS_E0    400
     #endif
  #else
     //No Preset
@@ -1196,8 +1196,8 @@
 #if ANY (SAPPHIRE_PRO, SAPPHIRE_PLUS)
     //Sapphire Pro
     #define DEFAULT_MAX_FEEDRATE          { 300, 300, 10, 50 }
-  #elif ENABLED(BLUER)
-    //Bluer
+  #elif ENABLED(Lotmaxx)
+    //Lotmaxx
     #define DEFAULT_MAX_FEEDRATE          { 250, 250, 10, 50 }
   #else
     //No Preset
@@ -1235,8 +1235,8 @@
   #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
   #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
   #define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
-#elif ENABLED (BLUER)
-  //Bluer
+#elif ENABLED (Lotmaxx)
+  //Lotmaxx
   #define DEFAULT_ACCELERATION          750    // X, Y, Z and E acceleration for printing moves
   #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
   #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
@@ -1685,31 +1685,19 @@
     #define INVERT_E5_DIR false
     #define INVERT_E6_DIR false
     #define INVERT_E7_DIR false
-  #elif ENABLED(BLUER)
-    //Bluer
+  #elif ENABLED(Lotmaxx)
+    //Lotmaxx
     // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-    #if ENABLED(INVERT_X)
+
       #define INVERT_X_DIR true
-    #else
-      #define INVERT_X_DIR false
-    #endif
-
-        #if ENABLED(INVERT_Y)
       #define INVERT_Y_DIR true
-    #else
-      #define INVERT_Y_DIR false
-    #endif
-
-    #if ENABLED(INVERT_Z)
       #define INVERT_Z_DIR true
-    #else
-      #define INVERT_Z_DIR false
-    #endif
+
 
     // @section extruder
 
     // For direct drive extruder v9 set to true, for geared extruder set to false.
-    #define INVERT_E0_DIR false
+    #define INVERT_E0_DIR true
     #define INVERT_E1_DIR false
     #define INVERT_E2_DIR false
     #define INVERT_E3_DIR false
@@ -1818,8 +1806,8 @@
       #define Y_MAX_POS Y_BED_SIZE
       #define Z_MAX_POS 350
     #endif
-  #elif ENABLED(BLUER)
-    //Bluer
+  #elif ENABLED(Lotmaxx)
+    //Lotmaxx
     //No Preset
     // Direction of endstops when homing; 1=MAX, -1=MIN
     // :[-1,1]

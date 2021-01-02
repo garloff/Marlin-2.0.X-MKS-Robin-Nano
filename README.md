@@ -1,5 +1,11 @@
-# Marlin Firmware adapted for the MKS Robin Nano 1.1/1.2
+# Marlin Firmware adapted for the MKS Robin Nano 1.1/1.2 and Lotmaxx SC-10.
 
+## Adjusted Marlin-2.0 by OsLee540i to work on Lotmaxx SC-10
+
+See description on this [Youtube video](https://www.youtube.com/watch?v=SwktHXBrtso)
+
+This is based on le3tspeak's Marlin-2 fork for Saphire-Pro/Plus/Bluer (MKS-Robin-Nano)
+on [github](https://github.com/le3tspeak/Marlin-2.0.X-MKS-Robin-Nano)
 
 ## Marlin 2.0<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
