@@ -5,7 +5,12 @@
 See description on this [Youtube video](https://www.youtube.com/watch?v=SwktHXBrtso)
 
 This is based on le3tspeak's Marlin-2 fork for Saphire-Pro/Plus/Bluer (MKS-Robin-Nano)
-on [github](https://github.com/le3tspeak/Marlin-2.0.X-MKS-Robin-Nano)
+on [github](https://github.com/le3tspeak/Marlin-2.0.X-MKS-Robin-Nano).
+
+Note that this is adjusted to work with OsLee540i's special direct extruder (not the
+stock bowden extruder from the SC-10). You will likely need to adjust
+`STEPS_E0` and `Invert_E0_DIR` to match your extruder.
+
 
 ## Marlin 2.0<img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
